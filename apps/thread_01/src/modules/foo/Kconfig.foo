@@ -1,0 +1,15 @@
+#
+# Copyright (c) 2025 Aung Khant Maw
+#
+
+menuconfig APP_FOO
+	bool "Foo module"
+	default y
+
+if APP_FOO
+
+module = APP_FOO
+module-str = FOO
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # APP_BAR
