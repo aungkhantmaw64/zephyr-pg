@@ -14,8 +14,9 @@ west init
 west update
 west zephyr-export
 west packages pip --install
-pushd zephyr
+
 echo "Install zephyr sdk with west"
+pushd zephyr
 west sdk install
 popd
 popd

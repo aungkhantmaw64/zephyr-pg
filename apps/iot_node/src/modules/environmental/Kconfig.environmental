@@ -1,0 +1,15 @@
+#
+# Copyright (c) 2025 Aung Khant Maw
+#
+
+menuconfig IOT_NODE_MODULES_ENVIRONMENTAL
+	bool "Environmental module"
+	default y
+
+if IOT_NODE_MODULES_ENVIRONMENTAL
+
+module = IOT_NODE_MODULES_ENVIRONMENTAL
+module-str = ENVIRONMENTAL
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # ENVIRONMENTAL

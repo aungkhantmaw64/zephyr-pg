@@ -1,9 +1,8 @@
-FROM debian:bookworm-slim
+FROM ubuntu:24.04
 
-RUN apt-get update --fix-missing && apt-get install -y --no-install-recommends git cmake \
-  ninja-build gperf ccache dfu-util device-tree-compiler wget \
-  python3-dev python3-pip python3-setuptools python3-tk python3-wheel python3-venv \
-  xz-utils file make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1 minicom xxd usbutils
+RUN apt-get update && apt-get install -y --no-install-recommends git cmake ninja-build gperf \
+  ccache dfu-util device-tree-compiler wget python3-dev python3-venv python3-tk \
+  xz-utils file make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1
 
 ARG ZEPHYR_ROOT=/opt/zephyrproject
 ARG APP_PATH=${ZEPHYR_ROOT}/zephyr/workdir
